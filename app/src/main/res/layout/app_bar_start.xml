@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <include layout="@layout/content_start" />
+
+    <RelativeLayout
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/relative_search"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+
+
+            android:textAlignment="center"
+            android:textColorHint="#ffff"
+            android:hint="@string/search_hint"
+            android:id="@+id/search_edit_frame"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:background="@drawable/button"
+            android:padding="10dp"
+            android:paddingStart="55dp"
+
+            android:paddingLeft="60dp"
+            android:textColor="#ffff"
+            android:textSize="18dp">
+
+        </AutoCompleteTextView>
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+
+            android:layout_alignStart="@id/search_edit_frame"
+            android:layout_alignLeft="@id/search_edit_frame"
+            android:layout_alignTop="@id/search_edit_frame"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/ic_search" />
+
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_below="@id/relative_search"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+
+            android:id="@+id/search_edit_places"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/button"
+
+            android:hint="@string/search_places_hint"
+            android:padding="10dp"
+            android:paddingStart="55dp"
+
+            android:paddingLeft="60dp"
+            android:textAlignment="center"
+            android:textColor="#ffff"
+            android:textColorHint="#ffff"
+            android:textSize="18dp">
+
+        </AutoCompleteTextView>
+
+        <ImageButton
+            android:id="@+id/search_button_places"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+
+            android:layout_alignStart="@id/search_edit_places"
+            android:layout_alignLeft="@id/search_edit_places"
+            android:layout_alignTop="@id/search_edit_places"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/ic_nevigate" />
+
+        <ImageButton
+            android:id="@+id/drop_down_places"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_alignEnd="@id/search_edit_places"
+            android:layout_alignRight="@id/search_edit_places"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_down" />
+
+
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/colorPrimary"
+        app:elevation="20dp"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_speaker"
+        tools:ignore="VectorDrawableCompat"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

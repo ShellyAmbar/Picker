@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_vertical"
+    android:layout_height="550dp"
+    android:theme="@style/Theme.UserDialog.AppCompat"
+    tools:context=".CallSomeone">
+
+    <RelativeLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+
+
+            android:textColorHint="#ffff"
+            android:hint="@string/search_contact"
+            android:id="@+id/search_edit_contact"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button"
+            android:padding="20dp"
+            android:paddingStart="55dp"
+
+            android:paddingLeft="60dp"
+            android:textColor="#ffff"
+            android:textSize="18dp">
+
+        </EditText>
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_alignTop="@id/search_edit_contact"
+            android:layout_alignStart="@id/search_edit_contact"
+
+            android:layout_alignBottom="@id/search_edit_contact"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/ic_search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@id/search_edit_contact" />
+
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+
+
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recycle_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
